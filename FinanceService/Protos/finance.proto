@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "FinanceService";
+
+package Finance;
+
+service Finances {
+  rpc GetModelPrice (PriceRequest) returns (PriceReply);
+}
+
+message PriceRequest {
+  string modelId = 1;
+}
+
+message PriceReply {
+  int32 price = 1;
+}
